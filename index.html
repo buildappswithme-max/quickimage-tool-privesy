@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08111f">
+  <meta name="description" content="Privacy Policy for QuickImage Tools, an Android image utility app by Mamata Yadav.">
+  <title>Privacy Policy · QuickImage Tools</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --surface: rgba(255, 255, 255, .88);
+      --surface-solid: #ffffff;
+      --surface-soft: #eef3ff;
+      --text: #172033;
+      --muted: #5d6880;
+      --border: #dfe5ef;
+      --accent: #4d65e8;
+      --accent-2: #7655dc;
+      --accent-soft: #e9edff;
+      --success: #087f5b;
+      --shadow: 0 18px 55px rgba(34, 46, 82, .10);
+      --radius: 22px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        color-scheme: dark;
+        --bg: #0a1020;
+        --surface: rgba(18, 27, 47, .88);
+        --surface-solid: #121b2f;
+        --surface-soft: #172342;
+        --text: #edf2ff;
+        --muted: #aeb9d3;
+        --border: #293654;
+        --accent: #9aa8ff;
+        --accent-2: #bca9ff;
+        --accent-soft: #202c5b;
+        --success: #56d7ad;
+        --shadow: 0 18px 55px rgba(0, 0, 0, .28);
+      }
+    }
+
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #0a1020;
+      --surface: rgba(18, 27, 47, .88);
+      --surface-solid: #121b2f;
+      --surface-soft: #172342;
+      --text: #edf2ff;
+      --muted: #aeb9d3;
+      --border: #293654;
+      --accent: #9aa8ff;
+      --accent-2: #bca9ff;
+      --accent-soft: #202c5b;
+      --success: #56d7ad;
+      --shadow: 0 18px 55px rgba(0, 0, 0, .28);
+    }
+
+    :root[data-theme="light"] {
+      color-scheme: light;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background:
+        radial-gradient(circle at 8% 0%, rgba(118, 85, 220, .16), transparent 29rem),
+        radial-gradient(circle at 100% 17%, rgba(77, 101, 232, .14), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: var(--accent); }
+    a:hover { color: var(--accent-2); }
+
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -4rem;
+      z-index: 10;
+      padding: .65rem 1rem;
+      border-radius: 999px;
+      background: var(--text);
+      color: var(--surface-solid);
+      text-decoration: none;
+    }
+
+    .skip-link:focus { top: 1rem; }
+
+    .shell {
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.25rem 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: .75rem;
+      color: var(--text);
+      font-weight: 800;
+      letter-spacing: -.02em;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 2.5rem;
+      height: 2.5rem;
+      place-items: center;
+      border-radius: 13px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 10px 25px rgba(77, 101, 232, .27);
+      color: #fff;
+      font-size: 1.15rem;
+    }
+
+    .top-actions { display: flex; align-items: center; gap: .65rem; }
+
+    .theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      min-height: 2.5rem;
+      padding: .5rem .8rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      font: inherit;
+      font-size: .88rem;
+      font-weight: 700;
+    }
+
+    .theme-toggle:hover { border-color: var(--accent); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      margin: 1.5rem 0 2.5rem;
+      padding: clamp(2rem, 5vw, 4.5rem);
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 32px;
+      background:
+        linear-gradient(118deg, rgba(11, 25, 54, .97), rgba(54, 42, 120, .94)),
+        #111d3a;
+      box-shadow: var(--shadow);
+      color: #f6f8ff;
+      isolation: isolate;
+    }
+
+    .hero::before,
+    .hero::after {
+      position: absolute;
+      z-index: -1;
+      width: 19rem;
+      height: 19rem;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .hero::before { right: -6rem; top: -9rem; box-shadow: 0 0 0 2.5rem rgba(255, 255, 255, .035), 0 0 0 5.5rem rgba(255, 255, 255, .025); }
+    .hero::after { bottom: -12rem; left: 32%; width: 24rem; height: 24rem; border-color: rgba(160, 178, 255, .16); }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      margin: 0 0 1rem;
+      color: #bfcaff;
+      font-size: .77rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before { width: 1.7rem; height: 2px; background: #91a3ff; content: ""; }
+
+    h1, h2, h3 { line-height: 1.15; letter-spacing: -.035em; }
+    h1 { max-width: 760px; margin: 0; font-size: clamp(2.4rem, 7vw, 5.4rem); }
+    h2 { margin: 0 0 1rem; font-size: clamp(1.55rem, 3vw, 2.15rem); }
+    h3 { margin: 1.5rem 0 .55rem; font-size: 1.12rem; }
+
+    .hero-copy {
+      max-width: 710px;
+      margin: 1.2rem 0 0;
+      color: #d5ddff;
+      font-size: clamp(1rem, 1.7vw, 1.2rem);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .65rem;
+      margin-top: 1.7rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .48rem .75rem;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .08);
+      color: #eef1ff;
+      font-size: .84rem;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 250px minmax(0, 1fr);
+      align-items: start;
+      gap: 2.25rem;
+    }
+
+    .toc {
+      position: sticky;
+      top: 1rem;
+      padding: 1.15rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 10px 30px rgba(34, 46, 82, .06);
+      backdrop-filter: blur(14px);
+    }
+
+    .toc-title {
+      margin: 0 0 .65rem;
+      color: var(--muted);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .toc a {
+      display: block;
+      padding: .42rem .55rem;
+      border-radius: 9px;
+      color: var(--muted);
+      font-size: .9rem;
+      text-decoration: none;
+    }
+
+    .toc a:hover, .toc a:focus { background: var(--accent-soft); color: var(--accent); }
+
+    main { min-width: 0; }
+
+    .policy-card {
+      padding: clamp(1.35rem, 3vw, 2.5rem);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .policy-section {
+      scroll-margin-top: 1.25rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .policy-section:first-child { padding-top: 0; }
+    .policy-section:last-child { padding-bottom: 0; border-bottom: 0; }
+
+    p { margin: .7rem 0; }
+    ul { margin: .7rem 0; padding-left: 1.25rem; }
+    li { margin: .45rem 0; }
+
+    .notice {
+      display: flex;
+      gap: .85rem;
+      margin: 1.25rem 0;
+      padding: 1rem 1.1rem;
+      border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--border));
+      border-radius: 16px;
+      background: var(--accent-soft);
+    }
+
+    .notice-icon { flex: 0 0 auto; color: var(--accent); font-size: 1.25rem; }
+    .notice p { margin: 0; font-size: .94rem; }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .75rem;
+      margin: 1.25rem 0;
+    }
+
+    .info-item {
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: var(--surface-solid);
+    }
+
+    .info-label { margin-bottom: .2rem; color: var(--muted); font-size: .78rem; font-weight: 750; letter-spacing: .05em; text-transform: uppercase; }
+    .info-value { overflow-wrap: anywhere; font-weight: 700; }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .65rem;
+      margin: 1.1rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-list li {
+      position: relative;
+      margin: 0;
+      padding: .75rem .85rem .75rem 2.1rem;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: var(--surface-solid);
+      font-size: .93rem;
+    }
+
+    .feature-list li::before {
+      position: absolute;
+      left: .85rem;
+      top: .8rem;
+      color: var(--success);
+      content: "✓";
+      font-weight: 900;
+    }
+
+    code {
+      padding: .14rem .38rem;
+      border-radius: 6px;
+      background: var(--surface-soft);
+      color: var(--accent);
+      font-size: .9em;
+      overflow-wrap: anywhere;
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.15rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      background: linear-gradient(115deg, var(--surface-soft), var(--surface-solid));
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.7rem;
+      padding: .65rem 1rem;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .button:hover { background: var(--accent-2); color: #fff; }
+
+    details {
+      margin: .75rem 0;
+      padding: .85rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: var(--surface-solid);
+    }
+
+    summary { cursor: pointer; font-weight: 750; }
+    details p { color: var(--muted); }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 2rem 0 3rem;
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    .footer a { color: inherit; }
+
+    @media (max-width: 820px) {
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; }
+      .toc nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .15rem .45rem; }
+    }
+
+    @media (max-width: 560px) {
+      .shell { width: min(100% - 1rem, 1120px); }
+      .topbar { padding-top: .8rem; }
+      .brand span:last-child { max-width: 130px; }
+      .theme-toggle span { display: none; }
+      .hero { margin-top: 1rem; padding: 2rem 1.25rem; border-radius: 23px; }
+      .policy-card { padding: 1.15rem; border-radius: 18px; }
+      .info-grid, .feature-list { grid-template-columns: 1fr; }
+      .contact, .footer { align-items: flex-start; flex-direction: column; }
+      .button { width: 100%; }
+    }
+
+    @media print {
+      :root { color-scheme: light; }
+      body { background: #fff; color: #111; }
+      .top-actions, .toc { display: none; }
+      .shell { width: 100%; }
+      .hero, .policy-card { box-shadow: none; }
+      .hero { color: #111; background: #eef1ff; }
+      .hero-copy, .eyebrow, .pill { color: #30385d; }
+      .pill { border-color: #c8cee5; }
+      .layout { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#policy">Skip to policy</a>
+
+  <div class="shell">
+    <header class="topbar" aria-label="Site header">
+      <a class="brand" href="#top" aria-label="QuickImage Tools privacy policy home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>QuickImage Tools</span>
+      </a>
+      <div class="top-actions">
+        <button class="theme-toggle" type="button" id="themeToggle" aria-pressed="false" aria-label="Switch color theme">
+          <span aria-hidden="true">◐</span><span>Theme</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero" id="top" aria-labelledby="page-title">
+      <p class="eyebrow">Privacy, clearly explained</p>
+      <h1 id="page-title">Privacy Policy</h1>
+      <p class="hero-copy">QuickImage Tools is built to help you work with images on your Android device. This policy explains what stays on your device, what may be processed by advertising partners, and how to contact the developer.</p>
+      <div class="hero-meta" aria-label="Policy details">
+        <span class="pill">Updated 10 Oct 2026</span>
+        <span class="pill">Android package: com.aistudio.quickimage.wzkx</span>
+      </div>
+    </section>
+
+    <div class="layout">
+      <aside class="toc" aria-label="Policy navigation">
+        <p class="toc-title">On this page</p>
+        <nav>
+          <a href="#overview">Overview</a>
+          <a href="#information">Information</a>
+          <a href="#ads">Advertising</a>
+          <a href="#permissions">Permissions</a>
+          <a href="#retention">Storage & retention</a>
+          <a href="#choices">Your choices</a>
+          <a href="#children">Children</a>
+          <a href="#changes">Changes</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </aside>
+
+      <main id="policy" class="policy-card">
+        <section class="policy-section" id="overview" aria-labelledby="overview-title">
+          <h2 id="overview-title">1. Overview</h2>
+          <p class="intro">This Privacy Policy applies to the QuickImage Tools Android application, package name <code>com.aistudio.quickimage.wzkx</code>, developed by Mamata Yadav (“we,” “us,” or “our”).</p>
+          <p>QuickImage Tools is designed around local image utilities, including image compression, resizing, JPG/PNG/WEBP conversion, images-to-PDF conversion, saving, sharing, and a local “My Files” history. The app also supports light and dark themes and displays advertisements through Google AdMob.</p>
+          <div class="notice" role="note">
+            <div class="notice-icon" aria-hidden="true">ⓘ</div>
+            <p><strong>Short version:</strong> the core image tools are intended to process your selected images on your device. We do not intentionally upload your image files to our own servers for those core features. Advertising partners may process device, advertising, diagnostic, and usage information as described below.</p>
+          </div>
+          <p>By using QuickImage Tools, you acknowledge this policy. If you do not agree with it, please stop using the app and remove it from your device.</p>
+        </section>
+
+        <section class="policy-section" id="information" aria-labelledby="information-title">
+          <h2 id="information-title">2. Information we handle</h2>
+          <h3>Information you choose to use in the app</h3>
+          <p>When you select an image or create a PDF, the app may access the files you choose so it can perform the requested operation. The resulting files and local history may be stored on your device according to your Android settings and the app’s behavior.</p>
+          <ul class="feature-list">
+            <li>Compress images to reduce file size</li>
+            <li>Resize images for different dimensions</li>
+            <li>Convert between JPG, PNG, and WEBP</li>
+            <li>Combine images into a PDF</li>
+            <li>Save and share the files you create</li>
+            <li>View local “My Files” history</li>
+          </ul>
+
+          <h3>Information we do not request for core features</h3>
+          <p>The described core features do not require you to create an account or provide your name, phone number, contacts, or the contents of your images to us. We do not intentionally collect image files on our own servers through the core offline tools.</p>
+          <p>That statement describes the app features covered by this policy. If a later version adds an online feature, this policy will be updated before that feature is used to collect or transmit additional information.</p>
+        </section>
+
+        <section class="policy-section" id="ads" aria-labelledby="ads-title">
+          <h2 id="ads-title">3. Advertising and Google AdMob</h2>
+          <p>QuickImage Tools uses Google AdMob to display ads. The Google Mobile Ads SDK may collect and share certain information to deliver ads, measure advertising performance, prevent fraud and abuse, and support diagnostics. Depending on the SDK version, device settings, ad configuration, and your choices, this can include:</p>
+          <ul>
+            <li>IP address and general network information;</li>
+            <li>advertising identifiers, app set identifiers, and other device or account-related identifiers;</li>
+            <li>information about app interactions and ad interactions; and</li>
+            <li>diagnostic and performance information.</li>
+          </ul>
+          <p>Google may use this information to provide personalized or non-personalized advertising, subject to applicable law, your device settings, and the consent choices available in your region. We do not control Google’s independent processing of information. For more information, review <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google’s Privacy Policy</a> and Google’s <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" target="_blank" rel="noopener noreferrer">Mobile Ads SDK data disclosure</a>.</p>
+          <p>Where required, applicable consent or privacy choices may be presented by Google’s privacy tools or the app’s advertising configuration. You may also be able to reset or limit your Android advertising identifier through your device settings. These controls may change over time and may not stop all contextual or non-personalized advertising.</p>
+          <div class="notice" role="note">
+            <div class="notice-icon" aria-hidden="true">✓</div>
+            <p><strong>Important distinction:</strong> AdMob’s processing is separate from the local image operations. The presence of ads does not mean that your selected image files are uploaded to us for compression, resizing, conversion, or PDF creation.</p>
+          </div>
+        </section>
+
+        <section class="policy-section" id="permissions" aria-labelledby="permissions-title">
+          <h2 id="permissions-title">4. Device permissions</h2>
+          <p>Depending on your Android version and the way you use the app, QuickImage Tools may request access needed to:</p>
+          <ul>
+            <li>read images or files that you select for processing;</li>
+            <li>save converted, compressed, resized, or PDF files to a location you choose; and</li>
+            <li>share a file through another app after you request sharing.</li>
+          </ul>
+          <p>Android controls these permissions. You can review or revoke them in your device settings, although revoking access may prevent the related feature from working.</p>
+        </section>
+
+        <section class="policy-section" id="retention" aria-labelledby="retention-title">
+          <h2 id="retention-title">5. Local storage and retention</h2>
+          <p>Files created or selected through QuickImage Tools may remain on your device until you delete them, clear the app’s data, uninstall the app, or remove them using your file manager. The app’s local “My Files” history is intended to help you find files on the device; it is not intended to create a copy of your images on our servers.</p>
+          <p>Because files are stored locally, anyone who can unlock or access your device may be able to access them. Use your Android device’s screen lock, file permissions, and other security controls.</p>
+          <p>AdMob and other third-party services may retain their information under their own policies and settings. We do not control those retention periods.</p>
+        </section>
+
+        <section class="policy-section" id="sharing" aria-labelledby="sharing-title">
+          <h2 id="sharing-title">6. Sharing files</h2>
+          <p>When you use the app’s share feature, Android passes the file to the application or service you select. That receiving application may collect and use the file or related information under its own privacy policy. Review the policies of any service you choose before sharing sensitive images or documents.</p>
+        </section>
+
+        <section class="policy-section" id="security" aria-labelledby="security-title">
+          <h2 id="security-title">7. Security</h2>
+          <p>We design the core processing flow to work locally where described above. No method of storing or transmitting information is completely secure, and we cannot guarantee the security of files on your device or of services operated by third parties. Keep your device and Android software updated and use a strong device lock.</p>
+        </section>
+
+        <section class="policy-section" id="choices" aria-labelledby="choices-title">
+          <h2 id="choices-title">8. Your choices</h2>
+          <ul>
+            <li>You can choose which images or files to open in the app.</li>
+            <li>You can deny or revoke file access through Android settings.</li>
+            <li>You can delete output files and local history from your device.</li>
+            <li>You can manage Android advertising-ID and ad-personalization controls in your device settings.</li>
+            <li>You can stop all app processing by uninstalling QuickImage Tools.</li>
+            <li>You can contact us about questions or requests using the email address below.</li>
+          </ul>
+          <p>Some choices may reduce functionality or may not apply to information processed independently by Google or another third-party service.</p>
+        </section>
+
+        <section class="policy-section" id="children" aria-labelledby="children-title">
+          <h2 id="children-title">9. Children’s privacy</h2>
+          <p>QuickImage Tools is not intended to knowingly collect personal information from children. The app’s core features do not ask users to submit personal information to us. If you believe a child has provided personal information to us, please contact us so we can review the concern.</p>
+          <p>Advertising services may apply their own child-directed treatment and age-related rules. Parents and guardians should review Google’s policies and manage the device’s settings when a child uses the app.</p>
+        </section>
+
+        <section class="policy-section" id="changes" aria-labelledby="changes-title">
+          <h2 id="changes-title">10. Changes to this policy</h2>
+          <p>We may update this Privacy Policy when the app’s features, advertising setup, legal requirements, or data practices change. The “Updated” date at the top of this page shows when the latest version was published. Your continued use of the app after an update means you acknowledge the revised policy.</p>
+        </section>
+
+        <section class="policy-section" id="contact" aria-labelledby="contact-title">
+          <h2 id="contact-title">11. Contact</h2>
+          <p>If you have a privacy question, concern, or request about QuickImage Tools, contact the developer:</p>
+          <div class="contact">
+            <div>
+              <strong>Mamata Yadav</strong><br>
+              <a href="mailto:mamtayadav33392@gmail.com">mamtayadav33392@gmail.com</a>
+            </div>
+            <a class="button" href="mailto:mamtayadav33392@gmail.com?subject=QuickImage%20Tools%20privacy%20question">Email developer</a>
+          </div>
+          <p style="margin-top: 1.25rem; color: var(--muted); font-size: .9rem;">Please include enough detail for us to understand your request. Do not email highly sensitive images or documents unless necessary.</p>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <span>© 2026 Mamata Yadav · QuickImage Tools</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </div>
+
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const button = document.getElementById('themeToggle');
+      const saved = localStorage.getItem('quickimage-theme');
+
+      if (saved === 'light' || saved === 'dark') {
+        root.dataset.theme = saved;
+      }
+
+      const updateLabel = () => {
+        const dark = root.dataset.theme === 'dark' || (!root.dataset.theme && matchMedia('(prefers-color-scheme: dark)').matches);
+        button.setAttribute('aria-pressed', String(dark));
+        button.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+      };
+
+      button.addEventListener('click', () => {
+        const isDark = root.dataset.theme === 'dark' || (!root.dataset.theme && matchMedia('(prefers-color-scheme: dark)').matches);
+        const next = isDark ? 'light' : 'dark';
+        root.dataset.theme = next;
+        localStorage.setItem('quickimage-theme', next);
+        updateLabel();
+      });
+
+      updateLabel();
+    })();
+  </script>
+</body>
+</html>
